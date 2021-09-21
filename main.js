@@ -4,7 +4,23 @@ const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
 
+function likeButton(evt) {
+  const heartButton = evt.target
+  mimicServerCall("invalidServer")
+  .then(function(response){
+    heartButton.innerText = FULL_HEART
+  })
+    // 
+  .catch(function(error){
+    // Display the error modal by removing the .hidden class
+    // Display the server error message in the modal
+    // Use setTimeout to hide the modal after 3 seconds (add the .hidden class)
+  })
+    
+}
 
+button = document.querySelector
+button.addEventListener("click", likeButton);
 
 
 //------------------------------------------------------------------------------
